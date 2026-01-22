@@ -1,96 +1,220 @@
-/* import font */
+/*************  ✨ Windsurf Command 🌟  *************/
+
+
+/* Import Google Fonts - Miniver & Poppins */
 
 @import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
 html {
+    scroll-behavior: smooth;
     font-size: 62.5%;
+    /* 1rem = 10px */
 }
-
-
-/* khôi phục lại cỡ chữ mặc định theo rem */
 
 body {
     font-size: 1.6rem;
     font-family: 'Poppins', sans-serif;
+    color: var(--white-color);
 }
 
- :root {
-    /* color */
+
+/* --- Khai báo biến màu sắc (Variables) --- */
+
+:root {
     --white-color: #fff;
-    --dark-color: black;
+    --dark-color: #000;
     --primary-color: #3b141c;
+    /* Màu nâu đậm chủ đạo */
     --secondary-color: #f3961c;
+    /* Màu cam điểm nhấn */
     --light-pink-color: #f3f4f5;
     --medium-grey-color: #ccc;
-    /* font-size */
+    /* Font sizes */
     --font-size-s: 0.9rem;
     --font-size-n: 1rem;
     --font-size-m: 1.12rem;
     --font-size-l: 1.5rem;
     --font-size-xl: 2rem;
     --font-size-xxl: 2.3rem;
-    /* Font  weight */
+    /* Font weights */
     --font-weight-n: 400;
     --font-weight-medium: 500;
-    --font-weight-semibold: 500;
+    --font-weight-semibold: 600;
     --font-weight-bold: 700;
     /* Border radius */
     --border-radius-s: 8px;
     --border-radius-m: 30px;
     --border-radius-circle: 50%;
-    /* Side max width    */
+    /* Site max width */
     --site-max-width: 1300px;
 }
 
+
+/* --- Header & Navigation --- */
+
 header {
     background-color: var(--primary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 header .nav-bar {
     display: flex;
     align-items: center;
-    padding: 20px 0;
     justify-content: space-between;
+    padding: 20px 0;
     width: 100%;
     max-width: var(--site-max-width);
     margin: 0 auto;
 }
 
-header ul {
+header .nav-logo .logo-text {
+    color: var(--white-color);
+    font-size: 2.4rem;
+    /* Cỡ chữ logo */
+    font-weight: var(--font-weight-bold);
+}
+
+header .nav-menu {
+    display: flex;
     list-style: none;
+    gap: 10px;
+    /* Khoảng cách giữa các mục menu */
+}
+
+header .nav-menu .nav-link {
+    color: var(--white-color);
+    padding: 10px 18px;
+    border-radius: var(--border-radius-m);
+    font-weight: var(--font-weight-medium);
+    transition: 0.3s ease;
+    /* Hiệu ứng mượt khi hover */
+}
+
+header .nav-menu .nav-link:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+
+/* --- Hero Section --- */
+
+.hero-section {
+    background-color: var(--primary-color);
+    min-height: 100vh;
+    padding-top: 80px;
+    /* Trừ hao cho phần header cố định */
+    display: flex;
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+}
+
+.hero-section .section-content {
+    width: 100%;
+    max-width: var(--site-max-width);
+    margin: 0 auto;
+}
+
+.hero-section .hero-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white-color);
+}
+
+
+/* Phần chữ bên trái */
+
+.hero-section .hero-details .title {
+    color: var(--secondary-color);
+    font-size: 5rem;
+    /* Cỡ chữ lớn cho tiêu đề */
+    font-family: "Miniver", sans-serif;
+}
+
+.hero-section .hero-details .subtitle {
+    margin-top: 10px;
+    font-size: 3.5rem;
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.2;
+}
+
+.hero-section .hero-details .descrisption {
+    margin: 24px 0 40px;
+    font-size: 1.6rem;
+    max-width: 500px;
+    /* Giới hạn độ rộng đoạn văn */
+    line-height: 1.5;
+}
+
+
+/* --- PHẦN BẠN BỊ SAI (Đã sửa) --- */
+
+
+/* Class cha (.btn-group) chỉ dùng để dàn vị trí */
+
+.hero-section .hero-details .btn-group {
+    display: flex;
+    gap: 20px;
+    text-decoration: none;
+}
+
+
+/* Style chung cho 2 nút bên trong */
+
+.hero-section .hero-details .btn-group a {
+    padding: 12px 30px;
+    border-radius: var(--border-radius-m);
+    font-weight: var(--font-weight-medium);
+    display: inline-block;
+    color: var(--primary-color);
+    /* Chữ màu nâu */
+    background-color: var(--secondary-color);
+    /* Nền cam */
+    transition: 0.3s ease;
+}
+
+
+/* Hiệu ứng khi di chuột vào nút */
+
+.hero-section .hero-details .btn-group a:hover {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+.hero-section .hero-details .btn-group .button-contact-us {
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.hero-section .hero-details .btn-group .button-contact-us:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+
+/* Phần ảnh bên phải */
+
+.hero-details .hero-img-wrapper {
+    max-width: 500px;
+    width: 100%;
+}
+
+.hero-details .hero-img-wrapper img {
+    width: 100%;
+    object-fit: contain;
 }
 
 a {
     text-decoration: none;
-}
-
-button {
-    cursor: pointer;
-    border: none;
-}
-
-img {
-    width: 100%;
-}
-
-.nav-bar .nav-logo .logo-text {
-    color: var(--white-color);
-}
-
-.nav-bar .nav-menu {
-    display: flex;
-}
-
-.nav-bar .nav-menu .nav-link {
-    color: var(--white-color);
-    padding: 10px 18px;
-    border-radius: var(--border-radius-m);
-}
-
-.nav-bar .nav-menu .nav-link:hover {
-    background-color: var(--secondary-color);
 }

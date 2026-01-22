@@ -218,3 +218,75 @@ header .nav-menu .nav-link:hover {
 a {
     text-decoration: none;
 }
+
+
+/* About Section */
+
+.about-container {
+    background-color: var(--light-pink-color);
+    padding: 88px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* 2. Xử lý ảnh (Cột trái) */
+
+.about-section .about-img {
+    flex: 1;
+    /* Chiếm 1 phần không gian */
+    display: flex;
+    justify-content: center;
+    /* Căn giữa ảnh trong cột của nó */
+}
+
+.about-img {
+    margin: 0 auto;
+}
+
+.about-picture {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.about-section .about-text-content {
+    color: var(--dark-color);
+    font-size: 3rem;
+    font-weight: var(--border-radius-m);
+    text-align: center;
+}
+
+.about-text-content .section-title {
+    margin-bottom: 25px;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: var(--font-weight-bold);
+}
+
+.about-text-content .section-title::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about-text-content .about-description {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.about-section .social-link-list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 25px;
+    align-items: center;
+}

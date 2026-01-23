@@ -290,3 +290,69 @@ a {
     gap: 25px;
     align-items: center;
 }
+
+
+/* Menu-Section */
+
+.menu-section {
+    background-color: var(--dark-color);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.menu-title {
+    position: relative;
+}
+
+.menu-section .menu-title .section-title {
+    color: var(--white-color);
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin: 0 40px;
+    margin-bottom: 80px;
+    padding: 20px 0;
+    font-weight: var(--font-weight-semibold);
+}
+
+.menu-section .menu-title .section-title::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    border-radius: 4px;
+}
+
+.menu-section .section-content .menu-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    list-style: none;
+    margin-top: 40px;
+    padding: 0 40px;
+}
+
+.menu-section .menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    cursor: pointer;
+    transition: 0.3s;
+    ;
+}
+
+.menu-section .menu-item :hover {
+    transform: translateY(-10px);
+}
+
+.menu-section .menu-img {
+    width: 80%;
+    max-width: 250px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    aspect-ratio: 1/1;
+}

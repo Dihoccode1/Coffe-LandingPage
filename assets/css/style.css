@@ -574,9 +574,9 @@ a {
     color: var(--white-color);
     border-radius: var(--border-radius-m);
     width: 50%;
+    transition: 0.3s ease;
 }
 
-.contact-form.submit-button:hover {
-    background-color: var(--primary-color);
-    color: var(--white-color);
+.contact-form .submit-button:hover {
+    background-color: var(--secondary-color);
 }
